@@ -1,0 +1,199 @@
+html {
+  -webkit-scroll-behaior: smooth;
+  -moz-scroll-behaior: smooth;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.main-btn {
+  background-color: var(--btn-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+.main-btn:hover,
+.main-btn:focus {
+  background-color: var(--btn-color);
+  color: var(--yellow-color);
+}
+/* Start Global Variable */
+:root {
+  --dark-color: #19283f;
+  --main-color: #33d1cc;
+  --btn-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+/* End Global Variable */
+.navbar {
+  background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--main-color);
+}
+.navbar .search {
+  border-left: var(--main-color) solid 1px;
+}
+.navbar .search svg {
+  color: var(--main-color);
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .container a[role="button"] {
+  background-color: var(--btn-color);
+  color: var(--yellow-color);
+}
+/* ##################################### */
+.landing {
+  background-color: var(--dark-color);
+  min-height: calc(100vh - 72px);
+}
+.main-title::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  height: 2px;
+  width: 120px;
+  background-color: var(--main-color);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.services .row {
+  margin-top: 200px;
+}
+.services .row .main-srv {
+  counter-increment: num;
+}
+@media (max-width: 991px) {
+  .services .row {
+    row-gap: 150px;
+  }
+}
+.services .row .main-srv::before {
+  content: counter(num);
+  position: absolute;
+  top: -230px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 250px;
+  color: #eff7fa;
+}
+.services .row svg {
+  color: var(--main-color);
+  font-size: 60px;
+}
+.services .row h3 {
+  color: var(--yellow-color);
+}
+/* Start Portfolio */
+.portfolio {
+  background-color: var(--section-color);
+}
+.portfolio .links li.active,
+.portfolio .links li.active:hover {
+  background-color: var(--btn-color);
+  color: var(--yellow-color);
+}
+.portfolio .links li:hover {
+  color: var(--btn-color);
+}
+.gallery .box {
+  padding: 5px;
+}
+.gallery .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: rgb(51, 209, 204, 0.76);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+  font-size: 1.5rem;
+  transform: translateX(calc(-100% - 5px));
+}
+.gallery .box:hover::before {
+  transform: translateX(0);
+}
+/* End Portfolio */
+/* Start About */
+.about .container .text {
+  max-width: 500px;
+}
+@media (max-width: 991px) {
+  .about .row .col:first-of-type {
+    margin-bottom: 1.5rem;
+  }
+}
+/* End About */
+/* Start Team */
+.team {
+  background-color: var(--section-color);
+}
+.team h2 {
+  color: var(--yellow-color);
+}
+.team .row .box h4 {
+  background-color: var(--main-color);
+}
+/* End Team */
+/* Start Project */
+.project .row .box {
+  padding: 0 12px;
+}
+.project .project-content {
+  background-color: var(--dark-color);
+}
+/* End Project */
+/* Start Subscribe */
+.subscribe {
+  background-color: var(--yellow-color);
+}
+.subscribe form input:first-of-type:focus {
+  outline: none;
+  caret-color: white;
+}
+.subscribe form input[type="email"]::placeholder {
+  color: white;
+}
+.subscribe form input[type="submit"] {
+  color: var(--yellow-color);
+  background-color: var(--dark-color);
+}
+/* End Subscribe */
+/* Start Footer */
+footer {
+  background-color: var(--dark-color);
+}
+footer span.text1 {
+  color: var(--main-color);
+}
+footer span.text2 {
+  color: var(--yellow-color);
+}
+footer .icons svg {
+  width: 20px;
+  height: 20px;
+}
+footer .icons li:first-child svg {
+  background-color: #1877f2;
+}
+footer .icons li:nth-child(2) svg {
+  background-color: #1da1f2;
+}
+footer .icons li:nth-child(3) svg {
+  background-color: #0077b5;
+}
+footer .icons li:nth-child(4) svg {
+  background-color: red;
+}
+/* End Footer */
